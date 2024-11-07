@@ -6,9 +6,7 @@
 - Summary of Codes
 - Visualization
 - Summary of Answers
-- Insights
-- Challenges
-- History
+
 
 ## PROJECT OVERVIEW
 
@@ -220,13 +218,10 @@ artist_chart_counts = spotifydf.groupby('artist(s)_name')['total_chart_occurrenc
 ## VISUALIZATIONS
 
 - DISTRIBUTION OF RELEASED_YEAR AND ARTIST_COUNT
-```
 ![download](https://github.com/user-attachments/assets/c1119ee7-18e7-4d55-99e9-94a973e9babe)
-```
 
 - TREND ANALYSIS OF RELEASED_YEAR OVER TIME
 ![download](https://github.com/user-attachments/assets/f2259a40-224a-471e-8253-eff0b9ad5bd0)
-
 
 - TOP 5 MOST STREAMED TRACKS
 ![download](https://github.com/user-attachments/assets/5da0c467-97ed-4da0-b068-a00107a803da)
@@ -279,57 +274,123 @@ artist_chart_counts = spotifydf.groupby('artist(s)_name')['total_chart_occurrenc
 * GUIDE QUESTIONS
 
 - OVERVIEW OF DATASET
-```
+  
 How many rows and columns does the dataset contain?
- The dataset contains **953 rows** and **24 columns**
+> The dataset contains **953 rows** and **24 columns**
 
 What are the data types of each column? Are there any missing values?
+> The dataset consists of both **numerical (int64)** and **categorical (object)** data types. Common missing values include numerical attributes like streams and artist count. 
 
-```
 
 - BASIC DESCRIPTIVE STATISTICS
-```
+  
 What are the mean, median, and standard deviation of the streamscolumn and artist_count?
+
+> Mean: **513476285.8651212**
+
+> Median: **287278853**
+
+> Standard Deviation: **567873302.7109758**
 
 Are there any noticeable trends or outliers?
 
-```
+![download](https://github.com/user-attachments/assets/b5ae4523-306c-4e9f-a6d6-324a2de0db38)
+
+> Number of Outliers in 'released_year' : **151**
+
+> Number of Outliers in 'artist_count' : **27**
+
+> Trends : "Based on the graph, the most-streamed Spotify songs predominantly belong to the 2020s. In terms of the number of artists, most songs are produced by either one or two artists. Additionally, the year with the highest number of releases is 2022, with 402 occurrences
 
 - TOP PERFORMERS
-```
+  
 Which track has the highest number of streams? Display the top 5 most streamed tracks.
+
+> The track with the highest number of streams is **Blinding Lights by The Weeknd with a stream count of : 3703895074**
 
 Who are the top 5 most frequent artists based on the number of tracks in the dataset?
 
-```
+> The top 5 most frequent artists are: 
+
+> Taylor Swift with a number of tracks of: **34**
+
+> The Weeknd with a number of tracks of: **21** 
+
+> SZA with a number of tracks of: **19**
+
+> Bad Bunny with a number of tracks of: 19 Harry Styles with a number of tracks of: **17**
+
 
 - TEMPORAL TRENDS
-```
+
 Analyze the trends in the number of tracks released over time. Plot the number of tracks released per year.
 
+![image](https://github.com/user-attachments/assets/2fe7cea9-14df-4f6b-9ca2-726a290f90f0)
+
+![download](https://github.com/user-attachments/assets/dc257534-0ecf-4246-a649-28ea81021df2)
+
 Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?
-```
+
+![download](https://github.com/user-attachments/assets/fb6104b0-d2b3-41f5-9199-b813053d04ef)
+
+> Based on this graph, as the 'Ber' months approach, the number of songs released gradually increases, peaking during the New Year.
+
+> The month with the highest number of releases is **January**, with a total of **134 tracks**. 
 
 - GENRE AND MUSIC CHARACTERISTICS
-```
+ 
 Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?
+
+![download](https://github.com/user-attachments/assets/fa87d409-dc10-4639-b02c-e3e6b9134583)
+
+> Although the correlation is weak due to the low values, the attribute that appears to influence the streams the most is **speechiness**.
 
 Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
 
-```
+![download](https://github.com/user-attachments/assets/2e143cca-2a70-460f-a0b6-20b31a146a9b)
+
+> Based on the values shown in the heatmap, the answer to both questions is that there is no significant correlation between the variables. This is because the correlation coefficients are very low, specifically below 0.3, indicating a weak or negligible relationship between the attributes.
+
+
 - PLATFORM POPULARITY
-```
+
 How do the numbers of tracks in spotify_playlists, deezer_playlists , and apple_playlists compare?
+
+![download](https://github.com/user-attachments/assets/7b7cf8a5-d996-4631-8e68-34a6653bc343)
 
 Which platform seems to favor the most popular tracks?
 
-```
+![download](https://github.com/user-attachments/assets/f8465604-56ef-4c1d-82a9-8dcb89d389a7)
 
 - ADVANCED ANALYSIS
-```
+  
 Based on the streams data, can you identify any patterns among tracks with the same key or mode (Major vs. Minor)?
 
+SAME KEY:
+
+![download](https://github.com/user-attachments/assets/f8f7f699-067f-43ac-b556-05c37bd8f1fa)
+
+![download](https://github.com/user-attachments/assets/7c654dc7-b0c4-457d-b37e-8796da96c458)
+
+![download](https://github.com/user-attachments/assets/874d6e49-91f0-4dd3-ad34-264374a86f7a)
+
+> Based on the results, it can be observed that the most frequently produced tracks are typically in the keys of **C#, G, and F**. C# again stands out with the highest value, indicating that it is indeed the most popular key among listeners. Following C#, the keys of E and D# come next in terms of mean streams, supporting the idea that certain musical keys, like C#, resonate more with audiences and tend to be more popular on streaming platforms.
+
+SAME MODE:
+
+![download](https://github.com/user-attachments/assets/e1c425e9-c8f2-448e-9832-c46b68af54a2)
+
+![download](https://github.com/user-attachments/assets/bdb47077-f132-4e23-b801-6a7210d42597)
+
+> Based on the graphs, more tracks are made in minor. Minor tracks also have the highest stream count.
+
 Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.
-```
+
+![download](https://github.com/user-attachments/assets/360b3451-9057-4826-b502-c0027cdbdba6)
+
+![download](https://github.com/user-attachments/assets/ac2f390c-9f74-48df-a271-35e89ed355b4)
+
+> The graph shows that several artists, including Ed Sheeran and Harry Styles, frequently appear in both playlists and charts. However, Taylor Swift and The Weeknd stand out as the top artists, practically alternating positions across playlists and charts.
 
 
+Could I **_be_** doing any more EDA? - Chandler Bing (Friends)
