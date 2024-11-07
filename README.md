@@ -221,11 +221,115 @@ artist_chart_counts = spotifydf.groupby('artist(s)_name')['total_chart_occurrenc
 
 - DISTRIBUTION OF RELEASED_YEAR AND ARTIST_COUNT
 ```
-![image](https://github.com/user-attachments/assets/59e200bf-dd87-49a5-88d0-3a378849599b)
+![download](https://github.com/user-attachments/assets/c1119ee7-18e7-4d55-99e9-94a973e9babe)
 ```
 
 - TREND ANALYSIS OF RELEASED_YEAR OVER TIME
+![download](https://github.com/user-attachments/assets/f2259a40-224a-471e-8253-eff0b9ad5bd0)
+
+
+- TOP 5 MOST STREAMED TRACKS
+![download](https://github.com/user-attachments/assets/5da0c467-97ed-4da0-b068-a00107a803da)
+
+- TOP 5 MOST FREQUENT ARTISTS
+![download](https://github.com/user-attachments/assets/7c32a6c0-b758-417e-a3cb-b91628ce7627)
+  
+- TREND OF TRACKS RELEASED PER YEAR
+![download](https://github.com/user-attachments/assets/57f63acf-a1be-41a5-a0d6-600365d1d268)
+
+- TRACKS RELEASED PER MONTH
+![download](https://github.com/user-attachments/assets/947be524-bb61-4b77-a9fc-6049201e67e3)
+
+- CORRELATION BETWEEN STREAMS AND MUSICAL ATTRIBUTES
+![download](https://github.com/user-attachments/assets/c336e698-cded-4ba2-b0b9-63f32d669be7)
+
+- NUMBER OF TRACKS IN DIFFERENT PLATFORMS
+![download](https://github.com/user-attachments/assets/29eebd3d-2ead-4b01-a6cd-cd1cf40a9682)
+
+- CORRELATION BETWEEN STREAMS AND PLATFORM APPEARANCES
+![download](https://github.com/user-attachments/assets/b3a28707-f6f8-49ad-9f41-1d294932ba7f)
+
+- PLATFORM FAVORABILITY (MOST POPULAR TRACK)
+![download](https://github.com/user-attachments/assets/a29c02d5-3e8f-44ad-b2dd-163a87b8a375)
+
+- NUMBER OF SONGS ACCORDING TO KEY
+![download](https://github.com/user-attachments/assets/45d6a122-fa95-49d5-9a15-12a288ced0d2)
+
+- TOTAL STREAMS ACCORDING TO KEY
+![download](https://github.com/user-attachments/assets/38c777c6-75a5-49f6-9289-df80567a2fe9)
+
+- MEAN STREAMS ACCORDING TO KEY
+![download](https://github.com/user-attachments/assets/20c8feda-3dfe-45d5-90ef-320fcc4f558c)
+
+- NUMBER OF SONGS BY MODE
+![download](https://github.com/user-attachments/assets/164109ef-edc9-4c4f-b815-5d2ad7f57e95)
+
+- TOTAL STREAMS BY MODE
+![download](https://github.com/user-attachments/assets/4415300f-5c88-4f40-bbb2-751ed7640983)
+
+- TOP 10 ARTISTS IN PLAYLISTS ACROSS PLATFORMS (SPOTIFY, APPLE, AND DEEZER)
+![download](https://github.com/user-attachments/assets/c76d55f0-3d69-48ba-9b89-54809499fea1)
+
+- TOP 10 ARTISTS IN CHARTS ACROSS PLATFORMS (SPOTIFY, APPLE, AND DEEZER)
+![download](https://github.com/user-attachments/assets/5c280516-beb9-4ddb-8c33-ca00d3d2cc7f)
+
+
+## SUMMARY OF ANSWERS
+
+* GUIDE QUESTIONS
+
+- OVERVIEW OF DATASET
 ```
-![image](https://github.com/user-attachments/assets/7c5c2e63-0372-4a8c-8620-7228e3eb5eef)
+How many rows and columns does the dataset contain?
+ The dataset contains **953 rows** and **24 columns**
+
+What are the data types of each column? Are there any missing values?
+
 ```
+
+- BASIC DESCRIPTIVE STATISTICS
+```
+What are the mean, median, and standard deviation of the streamscolumn and artist_count?
+
+Are there any noticeable trends or outliers?
+
+```
+
+- TOP PERFORMERS
+```
+Which track has the highest number of streams? Display the top 5 most streamed tracks.
+
+Who are the top 5 most frequent artists based on the number of tracks in the dataset?
+
+```
+
+- TEMPORAL TRENDS
+```
+Analyze the trends in the number of tracks released over time. Plot the number of tracks released per year.
+
+Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?
+```
+
+- GENRE AND MUSIC CHARACTERISTICS
+```
+Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?
+
+Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
+
+```
+- PLATFORM POPULARITY
+```
+How do the numbers of tracks in spotify_playlists, deezer_playlists , and apple_playlists compare?
+
+Which platform seems to favor the most popular tracks?
+
+```
+
+- ADVANCED ANALYSIS
+```
+Based on the streams data, can you identify any patterns among tracks with the same key or mode (Major vs. Minor)?
+
+Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.
+```
+
 
