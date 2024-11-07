@@ -217,7 +217,6 @@ artist_chart_counts = spotifydf.groupby('artist(s)_name')['total_chart_occurrenc
 
 ## VISUALIZATIONS
 
-
 - DISTRIBUTION OF RELEASED_YEAR AND ARTIST_COUNT
 ![download](https://github.com/user-attachments/assets/c1119ee7-18e7-4d55-99e9-94a973e9babe)
 
@@ -271,11 +270,11 @@ artist_chart_counts = spotifydf.groupby('artist(s)_name')['total_chart_occurrenc
 
 
 - NUMBER OF SONGS BY MODE
-![download](https://github.com/user-attachments/assets/164109ef-edc9-4c4f-b815-5d2ad7f57e95)
+- ![download](https://github.com/user-attachments/assets/164109ef-edc9-4c4f-b815-5d2ad7f57e95)
 
 
 - TOTAL STREAMS BY MODE
-![download](https://github.com/user-attachments/assets/4415300f-5c88-4f40-bbb2-751ed7640983)
+- ![download](https://github.com/user-attachments/assets/4415300f-5c88-4f40-bbb2-751ed7640983)
 
 
 - TOP 10 ARTISTS IN PLAYLISTS ACROSS PLATFORMS (SPOTIFY, APPLE, AND DEEZER)
