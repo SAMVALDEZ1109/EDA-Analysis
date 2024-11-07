@@ -1,24 +1,31 @@
-# EDA-Analysis : Top Spotify Songs in 2023
+# Python EDA : Top Spotify Songs in 2023
 
-Table of Contents
-- About the Dataset
-- Basic Descriptive Statistics
-- Top Performers
-- Temporal Trends
-- Genre and Music Characteristics
-- Platform Popularity
-- Analysis
+## TABLE OF CONTENTS
 
-## ABOUT THE DATASET
-How many rows and columns does the dataset contain?
+- Summary of Codes
+- Answers for Questions
+- Insights
+- Challenges
+- History
 
-- The dataset contains 953 rows and 24 columns
+## SUMMARY OF CODES
 
-What are the data types of each column? Are there any missing values?
+- Import the libraries
+```
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+```
 
-- The dataset includes both categorical and numeric values, providing a diverse range of information. Two data types appear on each column : 'int64' for integer values and 'object' for textual data (or a string). To be specific, 17 columns of the data type 'int64' are shown, while there are 7 columns of the data type 'object'
+- Load CSV file and use shape function to get number of rows and columns. For this part, I used spotifydf as the name
+```
+spotifydf = pd.read_csv('spotify-2023.csv', encoding = 'ISO-8859-1')
 
-## BASIC DESCRIPTIVE STATISTICS
+row_count, column_count = spotifydf.shape
+```
 
-What are the streams column's mean, median, and standard deviation?
-
+- Using dtype function to print datatype of each column
+```
+print(spotifydf.dtypes)
+```
